@@ -42,3 +42,25 @@ export enum UserRole {
   USER = 'USER',
   ADMIN = 'ADMIN',
 }
+
+export const WalletFundIntentSchema = z.object({
+  amount: z.number().positive('Amount must be greater than 0'),
+  currency: z.string().min(3).max(10).optional(),
+});
+export type WalletFundIntentDTO = z.infer<typeof WalletFundIntentSchema>;
+
+export const MonnifyWebhookSchema = z.object({
+  event: z.string(),
+  data: z.object({
+    userId: z.number().int().positive(),
+    amount: z.number().positive(),
+    currency: z.string().min(3).max(10),
+    reference: z.string().min(6),
+    status: z.enum(['PAID', 'FAILED'])
+  })
+});
+export type MonnifyWebhookDTO = z.infer<typeof MonnifyWebhookSchema>;
+
+export const InitiateCallSchema = z.object({
+  calleeId: z.number().int().positive('Invalid calleeId'),
+});

@@ -4,6 +4,7 @@ import { Application } from "express";
 import dotenv from "dotenv";
 import { AppConfig } from "../utils/types";
 import logger from "../utils/logger";
+import { User, Wallet, Transaction, CallSession, CallEvent } from "../data/models";
 
 dotenv.config();
 
@@ -27,7 +28,7 @@ export const Database: DataSource = new DataSource({
     password: appConfig.DB_PASSWORD,
     database: appConfig.DB_NAME,
     synchronize: true,
-    entities: [],
+    entities: [User, Wallet, Transaction, CallSession, CallEvent],
     logging: false,
 })
 

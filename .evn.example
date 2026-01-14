@@ -1,0 +1,10 @@
+PORT=5000
+node_ENV=environment(produvtion,development,test)
+DB_HOST=your_db_host
+DB_PORT=5432
+DB_USERNAME-your_db_username
+DB_PASSWORD=Your_db_password
+DB_NAME+your_db_name
+JWT_SECRET=YOUR_JWT_SECRET
+JWT_REFRESH_SECRET=YOUR_JWT_REFRESH_SECRET
+PASSWORD_HASH=5
