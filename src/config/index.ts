@@ -13,7 +13,10 @@ export const appConfig: AppConfig = {
     DB_USERNAME: process.env.DB_USERNAME!,
     DB_PASSWORD: process.env.DB_PASSWORD!,
     DB_NAME: process.env.DB_NAME!,
-    DB_HOST: process.env.DB_HOST!
+    DB_HOST: process.env.DB_HOST!,
+    JWT_SECRET: process.env.JWT_SECRET!,
+    JWT_REFRESH_SECRET: process.env.JWT_REFRESH_SECRET!,
+    PASSWORD_HASH: Number(process.env.PASSWORD_HASH!) 
 }
 
 export const Database: DataSource = new DataSource({
