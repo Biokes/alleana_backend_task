@@ -1,4 +1,4 @@
-# AIleana Backend – Payments & Calls
+# AIleana – Payments & Calls
 
 ## 1. Project Overview
 
@@ -440,5 +440,3 @@ Recommended areas for tests:
   - JWT middleware for protected routes
   - Error handling and rate limiting
   - Validation via Zod on request payloads
-
-This implementation meets the AIleana Payments & Calls assessment objectives with clear architecture and runnable code.
