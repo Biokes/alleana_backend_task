@@ -3,6 +3,7 @@ import { errorHandler } from "./middleware/errorHandler";
 import dotenv from "dotenv";
 import cors from "cors";
 import rateLimit from "express-rate-limit";
+import cookieParser from "cookie-parser";
 import { bootstrap } from "./config";
 import { AppRouter } from "./router";
 
@@ -37,6 +38,7 @@ app.use(
 );
 
 app.use(express.json());
+app.use(cookieParser());
 app.use("/api/v1/", AppRouter);
 
 app.use((req: Request, res: Response) => {

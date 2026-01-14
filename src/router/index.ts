@@ -1,6 +1,8 @@
 import { Router, Request, Response } from "express";
 import { authRouter } from "./auth";
 import { appConfig } from "../config";
+import { walletRouter } from "./wallet";
+import { callsRouter } from "./calls";
 
 export const AppRouter: Router = Router();
 
@@ -15,3 +17,5 @@ AppRouter.get('/health', (req: Request, res: Response) => {
 });
 
 AppRouter.use('/auths', authRouter);
+AppRouter.use('/wallet', walletRouter);
+AppRouter.use('/calls', callsRouter);
