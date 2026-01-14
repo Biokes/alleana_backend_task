@@ -1,10 +1,7 @@
 {
-	// Visit https://aka.ms/tsconfig to read more about this file
 	"compilerOptions": {
 		"rootDir": "./src",
 		"outDir": "./dist",
-
-		// See also https://aka.ms/tsconfig/module
 		"module": "commonjs",
 		"target": "es2020",
 		"lib": ["esnext"],
