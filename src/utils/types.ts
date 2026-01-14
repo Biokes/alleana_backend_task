@@ -6,3 +6,7 @@ export type AppConfig = {
     DB_NAME: string,
     DB_HOST: string
 }
+
+export interface AppError extends Error {
+  status?: number;
+}
